@@ -1,0 +1,66 @@
+﻿生成启动时间为 2017/10/4 18:25:05。
+     1>项目“E:\Lib\Windows\Common\Common.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Common\Buffer.cpp DataBase\Config.cpp DataBase\DBObject.cpp DataBase\DBUtil.cpp DataBase\DBUtilPool.cpp Debugger\BreakPoint.cpp Debugger\Debugger.cpp Debugger\HardBreakPoint.cpp Debugger\MemBreakPoint.cpp Debugger\SoftBreakPoint.cpp DexFile\DexFile.cpp ElfFile\ElfFile.cpp Network\ClientManager.cpp Network\CustomPacket.cpp Network\IOCPServer.cpp Network\Packet.cpp Network\PacketFactory.cpp PEFile\LoadPE.cpp PEFile\PEFile.cpp Pool\ThreadPool.cpp
+         Config.cpp
+         正在生成代码...
+         正在编译...
+         ThreadPool.cpp
+         PEFile.cpp
+         LoadPE.cpp
+         PacketFactory.cpp
+         Packet.cpp
+         IOCPServer.cpp
+         CustomPacket.cpp
+         ClientManager.cpp
+         ElfFile.cpp
+         DexFile.cpp
+         SoftBreakPoint.cpp
+         MemBreakPoint.cpp
+         HardBreakPoint.cpp
+         Debugger.cpp
+         BreakPoint.cpp
+         DBUtilPool.cpp
+         DBUtil.cpp
+         DBObject.cpp
+         正在生成代码...
+         正在跳过...(未检测到相关更改)
+         Buffer.cpp
+       Lib:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"F:\cracking\program\16.Student\Student\Debug\Common.lib" /LIBPATH:zlib /NOLOGO Debug\Buffer.obj
+         Debug\StringA.obj
+         Debug\StringW.obj
+         Debug\Config.obj
+         Debug\DBObject.obj
+         Debug\DBUtil.obj
+         Debug\DBUtilPool.obj
+         Debug\BreakPoint.obj
+         Debug\Debugger.obj
+         Debug\HardBreakPoint.obj
+         Debug\MemBreakPoint.obj
+         Debug\SoftBreakPoint.obj
+         Debug\DexFile.obj
+         Debug\ElfFile.obj
+         Debug\sha1.obj
+         Debug\Decode2Asm.obj
+         Debug\Disasm.obj
+         Debug\Dsasm_Functions.obj
+         Debug\ClientManager.obj
+         Debug\CustomPacket.obj
+         Debug\IOCPServer.obj
+         Debug\Packet.obj
+         Debug\PacketFactory.obj
+         Debug\Socket.obj
+         Debug\LoadPE.obj
+         Debug\PEFile.obj
+         Debug\ThreadPool.obj
+         Debug\DriverUtil.obj
+         Debug\FileUtil.obj
+         Debug\InjectUtil.obj
+         Debug\Snapshoot.obj
+         Common.vcxproj -> F:\cracking\program\16.Student\Student\Debug\Common.lib
+     1>已完成生成项目“E:\Lib\Windows\Common\Common.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:07.49

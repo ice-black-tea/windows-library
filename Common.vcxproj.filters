@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\Array.h" />
+    <ClInclude Include="Common\Aspect.h" />
+    <ClInclude Include="Common\Buffer.h" />
+    <ClInclude Include="Common\Cmd.h" />
+    <ClInclude Include="Common\Common.h" />
+    <ClInclude Include="Common\HashMap.h" />
+    <ClInclude Include="Common\List.h" />
+    <ClInclude Include="Common\RefCnt.h" />
+    <ClInclude Include="Common\Singleton.h" />
+    <ClInclude Include="Common\SmartPtr.h" />
+    <ClInclude Include="Common\StringA.h" />
+    <ClInclude Include="Common\StringW.h" />
+    <ClInclude Include="Common\Tree.h" />
+    <ClInclude Include="Debugger\BreakPoint.h" />
+    <ClInclude Include="Debugger\Debugger.h" />
+    <ClInclude Include="Debugger\HardBreakPoint.h" />
+    <ClInclude Include="Debugger\MemBreakPoint.h" />
+    <ClInclude Include="Debugger\SoftBreakPoint.h" />
+    <ClInclude Include="DexFile\DexFile.h" />
+    <ClInclude Include="ElfFile\ElfFile.h" />
+    <ClInclude Include="Network\ClientContext.h" />
+    <ClInclude Include="Network\ClientManager.h" />
+    <ClInclude Include="Network\CustomPacket.h" />
+    <ClInclude Include="Network\IOCPServer.h" />
+    <ClInclude Include="Network\IOCPSpeed.h" />
+    <ClInclude Include="Network\NetworkDef.h" />
+    <ClInclude Include="Network\Packet.h" />
+    <ClInclude Include="Network\PacketFactory.h" />
+    <ClInclude Include="Network\Socket.h" />
+    <ClInclude Include="Pool\ThreadCmd.h" />
+    <ClInclude Include="Pool\ThreadPool.h" />
+    <ClInclude Include="PEFile\LoadPE.h" />
+    <ClInclude Include="PEFile\PEDef.h" />
+    <ClInclude Include="PEFile\PEFile.h" />
+    <ClInclude Include="PEFile\PEImp.h" />
+    <ClInclude Include="Util\DriverUtil.h" />
+    <ClInclude Include="Util\FileEdit.h" />
+    <ClInclude Include="Util\FileUtil.h" />
+    <ClInclude Include="Util\InjectUtil.h" />
+    <ClInclude Include="Util\Lock.h" />
+    <ClInclude Include="Util\Snapshoot.h" />
+    <ClInclude Include="StringT.h" />
+    <ClInclude Include="Struct.h" />
+    <ClInclude Include="Debugger\Define.h" />
+    <ClInclude Include="PEFile.h" />
+    <ClInclude Include="Network.h" />
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="Include\DexFile\DexFile.h" />
+    <ClInclude Include="Include\DexFile\sha1.h" />
+    <ClInclude Include="Include\Disasm\Decode2Asm.h" />
+    <ClInclude Include="Include\Disasm\Disasm.h" />
+    <ClInclude Include="Include\ElfFile\machine\_types.h" />
+    <ClInclude Include="Include\ElfFile\machine\exec.h" />
+    <ClInclude Include="Include\ElfFile\sys\exec_elf.h" />
+    <ClInclude Include="Include\ElfFile\elf.h" />
+    <ClInclude Include="Include\zlib\zconf.h" />
+    <ClInclude Include="Include\zlib\zlib.h" />
+    <ClInclude Include="DexFile.h" />
+    <ClInclude Include="ElfFile.h" />
+    <ClInclude Include="Debugger.h" />
+    <ClInclude Include="Database.h" />
+    <ClInclude Include="DataBase\Config.h" />
+    <ClInclude Include="DataBase\DBObject.h" />
+    <ClInclude Include="DataBase\DBUtil.h" />
+    <ClInclude Include="DataBase\DBUtilPool.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\Buffer.cpp" />
+    <ClCompile Include="Common\StringA.cpp" />
+    <ClCompile Include="Common\StringW.cpp" />
+    <ClCompile Include="Debugger\BreakPoint.cpp" />
+    <ClCompile Include="Debugger\Debugger.cpp" />
+    <ClCompile Include="Debugger\HardBreakPoint.cpp" />
+    <ClCompile Include="Debugger\MemBreakPoint.cpp" />
+    <ClCompile Include="Debugger\SoftBreakPoint.cpp" />
+    <ClCompile Include="DexFile\DexFile.cpp" />
+    <ClCompile Include="ElfFile\ElfFile.cpp" />
+    <ClCompile Include="Network\ClientManager.cpp" />
+    <ClCompile Include="Network\CustomPacket.cpp" />
+    <ClCompile Include="Network\IOCPServer.cpp" />
+    <ClCompile Include="Network\Packet.cpp" />
+    <ClCompile Include="Network\PacketFactory.cpp" />
+    <ClCompile Include="Network\Socket.cpp" />
+    <ClCompile Include="Pool\ThreadPool.cpp" />
+    <ClCompile Include="PEFile\LoadPE.cpp" />
+    <ClCompile Include="PEFile\PEFile.cpp" />
+    <ClCompile Include="Util\DriverUtil.cpp" />
+    <ClCompile Include="Util\FileUtil.cpp" />
+    <ClCompile Include="Util\InjectUtil.cpp" />
+    <ClCompile Include="Util\Snapshoot.cpp" />
+    <ClCompile Include="Include\DexFile\sha1.cpp" />
+    <ClCompile Include="Include\Disasm\Decode2Asm.cpp" />
+    <ClCompile Include="Include\Disasm\Disasm.cpp" />
+    <ClCompile Include="Include\Disasm\Dsasm_Functions.cpp" />
+    <ClCompile Include="DataBase\Config.cpp" />
+    <ClCompile Include="DataBase\DBObject.cpp" />
+    <ClCompile Include="DataBase\DBUtil.cpp" />
+    <ClCompile Include="DataBase\DBUtilPool.cpp" />
+  </ItemGroup>
+</Project>

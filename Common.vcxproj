@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5CE8F58F-23E6-4A2C-BD13-8D9165A39CAA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Common</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <AdditionalLibraryDirectories>zlib;</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <AdditionalLibraryDirectories>zlib;</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <UndefinePreprocessorDefinitions>
+      </UndefinePreprocessorDefinitions>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <UndefinePreprocessorDefinitions>
+      </UndefinePreprocessorDefinitions>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="Common\Array.h" />
+    <ClInclude Include="Common\Aspect.h" />
+    <ClInclude Include="Common\Buffer.h" />
+    <ClInclude Include="Common\Cmd.h" />
+    <ClInclude Include="Common\Common.h" />
+    <ClInclude Include="Common\HashMap.h" />
+    <ClInclude Include="Common\List.h" />
+    <ClInclude Include="Common\RefCnt.h" />
+    <ClInclude Include="Common\Singleton.h" />
+    <ClInclude Include="Common\SmartPtr.h" />
+    <ClInclude Include="Common\StringA.h" />
+    <ClInclude Include="Common\StringW.h" />
+    <ClInclude Include="Common\Tree.h" />
+    <ClInclude Include="Database.h" />
+    <ClInclude Include="DataBase\Config.h" />
+    <ClInclude Include="DataBase\DBObject.h" />
+    <ClInclude Include="DataBase\DBUtil.h" />
+    <ClInclude Include="DataBase\DBUtilPool.h" />
+    <ClInclude Include="Debugger.h" />
+    <ClInclude Include="Debugger\BreakPoint.h" />
+    <ClInclude Include="Debugger\Define.h" />
+    <ClInclude Include="Debugger\Debugger.h" />
+    <ClInclude Include="Debugger\HardBreakPoint.h" />
+    <ClInclude Include="Debugger\MemBreakPoint.h" />
+    <ClInclude Include="Debugger\SoftBreakPoint.h" />
+    <ClInclude Include="DexFile.h" />
+    <ClInclude Include="DexFile\DexFile.h" />
+    <ClInclude Include="ElfFile.h" />
+    <ClInclude Include="ElfFile\ElfFile.h" />
+    <ClInclude Include="Include\DexFile\DexFile.h" />
+    <ClInclude Include="Include\DexFile\sha1.h" />
+    <ClInclude Include="Include\Disasm\Decode2Asm.h" />
+    <ClInclude Include="Include\Disasm\Disasm.h" />
+    <ClInclude Include="Include\ElfFile\elf.h" />
+    <ClInclude Include="Include\ElfFile\machine\exec.h" />
+    <ClInclude Include="Include\ElfFile\machine\_types.h" />
+    <ClInclude Include="Include\ElfFile\sys\exec_elf.h" />
+    <ClInclude Include="Include\zlib\zconf.h" />
+    <ClInclude Include="Include\zlib\zlib.h" />
+    <ClInclude Include="Network.h" />
+    <ClInclude Include="Network\ClientContext.h" />
+    <ClInclude Include="Network\ClientManager.h" />
+    <ClInclude Include="Network\CustomPacket.h" />
+    <ClInclude Include="Network\IOCPServer.h" />
+    <ClInclude Include="Network\IOCPSpeed.h" />
+    <ClInclude Include="Network\NetworkDef.h" />
+    <ClInclude Include="Network\Packet.h" />
+    <ClInclude Include="Network\PacketFactory.h" />
+    <ClInclude Include="Network\Socket.h" />
+    <ClInclude Include="PEFile.h" />
+    <ClInclude Include="PEFile\LoadPE.h" />
+    <ClInclude Include="PEFile\PEDef.h" />
+    <ClInclude Include="PEFile\PEFile.h" />
+    <ClInclude Include="PEFile\PEImp.h" />
+    <ClInclude Include="Pool\ThreadCmd.h" />
+    <ClInclude Include="Pool\ThreadPool.h" />
+    <ClInclude Include="StringT.h" />
+    <ClInclude Include="Struct.h" />
+    <ClInclude Include="Util\DriverUtil.h" />
+    <ClInclude Include="Util\FileEdit.h" />
+    <ClInclude Include="Util\FileUtil.h" />
+    <ClInclude Include="Util\InjectUtil.h" />
+    <ClInclude Include="Util\Lock.h" />
+    <ClInclude Include="Util\Snapshoot.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\Buffer.cpp" />
+    <ClCompile Include="Common\StringA.cpp" />
+    <ClCompile Include="Common\StringW.cpp" />
+    <ClCompile Include="DataBase\Config.cpp" />
+    <ClCompile Include="DataBase\DBObject.cpp" />
+    <ClCompile Include="DataBase\DBUtil.cpp" />
+    <ClCompile Include="DataBase\DBUtilPool.cpp" />
+    <ClCompile Include="Debugger\BreakPoint.cpp" />
+    <ClCompile Include="Debugger\Debugger.cpp" />
+    <ClCompile Include="Debugger\HardBreakPoint.cpp" />
+    <ClCompile Include="Debugger\MemBreakPoint.cpp" />
+    <ClCompile Include="Debugger\SoftBreakPoint.cpp" />
+    <ClCompile Include="DexFile\DexFile.cpp" />
+    <ClCompile Include="ElfFile\ElfFile.cpp" />
+    <ClCompile Include="Include\DexFile\sha1.cpp" />
+    <ClCompile Include="Include\Disasm\Decode2Asm.cpp" />
+    <ClCompile Include="Include\Disasm\Disasm.cpp" />
+    <ClCompile Include="Include\Disasm\Dsasm_Functions.cpp" />
+    <ClCompile Include="Network\ClientManager.cpp" />
+    <ClCompile Include="Network\CustomPacket.cpp" />
+    <ClCompile Include="Network\IOCPServer.cpp" />
+    <ClCompile Include="Network\Packet.cpp" />
+    <ClCompile Include="Network\PacketFactory.cpp" />
+    <ClCompile Include="Network\Socket.cpp" />
+    <ClCompile Include="PEFile\LoadPE.cpp" />
+    <ClCompile Include="PEFile\PEFile.cpp" />
+    <ClCompile Include="Pool\ThreadPool.cpp" />
+    <ClCompile Include="Util\DriverUtil.cpp" />
+    <ClCompile Include="Util\FileUtil.cpp" />
+    <ClCompile Include="Util\InjectUtil.cpp" />
+    <ClCompile Include="Util\Snapshoot.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
