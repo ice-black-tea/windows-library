@@ -444,6 +444,11 @@ int CMyStringA::Split(const char *pszSplit, CMyList<CMyStringA>& lstStrings)
         pszStart = pszTarget + nSplitLength;
     }
 
+    if (pszStart[0] != '\0')
+    {
+        lstStrings.AddTail(CMyStringA(pszStart));
+    }
+
     return lstStrings.GetCount();
 }
 
@@ -544,7 +549,7 @@ double CMyStringA::ToFloat(const char *pszSrc)
 {
     double dblValue = 0;
 
-    sscanf(pszSrc, "%f", &dblValue);
+    sscanf(pszSrc, "%lf", &dblValue);
 
     return dblValue;
 }

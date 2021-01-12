@@ -6,7 +6,7 @@ const int MAX_SEMAPHORE = 0x7FFFFFFF;
 
 CThreadPool::CThreadPool()
     : m_nCount(0)
-    , m_phThread(NULL)
+    , m_lpThread(NULL)
     , m_hEvent(NULL)
     , m_hSemaphore(NULL)
 {
@@ -45,8 +45,8 @@ bool CThreadPool::Create(int nCount)
     }
 
     //线程数组
-    m_phThread = new HANDLE[m_nCount];
-    if (m_phThread == NULL)
+    m_lpThread = new HANDLE[m_nCount];
+    if (m_lpThread == NULL)
     {
         goto EXIT_LABLE;
     }
@@ -54,10 +54,10 @@ bool CThreadPool::Create(int nCount)
     //创建线程
     for (int i = 0; i < m_nCount; i++)
     {
-        m_phThread[i] = (HANDLE)_beginthreadex(
+        m_lpThread[i] = (HANDLE)_beginthreadex(
             NULL, 0, ThreadProc, this, 0, NULL);
 
-        if (m_phThread[i] == INVALID_HANDLE_VALUE)
+        if (m_lpThread[i] == INVALID_HANDLE_VALUE)
         {
             m_nCount = i;
             goto EXIT_LABLE;
@@ -84,17 +84,17 @@ void CThreadPool::Destory()
         //通知线程退出
         SetEvent(m_hEvent);
 
-        if (m_phThread != NULL && m_nCount > 0)
+        if (m_lpThread != NULL && m_nCount > 0)
         {
             //等待线程退出
             DWORD dwRet = WaitForMultipleObjects(
-                m_nCount, m_phThread, TRUE, INFINITE);
+                m_nCount, m_lpThread, TRUE, INFINITE);
 
             if (dwRet != WAIT_FAILED)
             {
                 for (int i = 0; i < m_nCount; i++)
                 {
-                    CloseHandle(m_phThread[i]);
+                    CloseHandle(m_lpThread[i]);
                 }
             }
         }
@@ -109,17 +109,22 @@ void CThreadPool::Destory()
         m_hSemaphore = NULL;
     }
 
-    if (m_phThread != NULL)
+    if (m_lpThread != NULL)
     {
-        delete[] m_phThread;
-        m_phThread = NULL;
+        delete[] m_lpThread;
+        m_lpThread = NULL;
+    }
+
+    if (!m_TaskManager.IsEmpty())
+    {
+        m_TaskManager.Clear();
     }
 }
 
 
-bool CThreadPool::Excute(IThreadCmd* pCmd)
+bool CThreadPool::PostTask(CSmartPtr<IThreadTask> lpTask)
 {
-    m_CmdMgr.Insert(pCmd);
+    m_TaskManager.Insert(lpTask);
 
     ReleaseSemaphore(m_hSemaphore, 1, NULL);
 
@@ -164,19 +169,18 @@ unsigned int __stdcall CThreadPool::ThreadProc(void* lpParam)
         }
 
         //执行操作
-        IThreadCmd* pCmd = pThreadPool->m_CmdMgr.GetCommand();
+        CSmartPtr<IThreadTask> lpTask = pThreadPool->m_TaskManager.GetNext();
 
-        if (pCmd != NULL)
+        if (lpTask != NULL)
         {
             try
             {
-                pCmd->Excute();
+                lpTask->Excute();
             }
             catch (...)
             {
-            	
+            	// ignore
             }
-            delete pCmd;
         }
     }
 

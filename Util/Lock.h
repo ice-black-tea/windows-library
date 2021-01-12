@@ -15,6 +15,9 @@ public:
     void Unlock() { LeaveCriticalSection(&m_cs); }
 
 private:
+    CLock(const CLock& obj);
+
+private:
     CRITICAL_SECTION m_cs;
 };
 
@@ -24,6 +27,30 @@ class CLockAspect : IAspect<CLock>
 public:
     CLockAspect(CLock *pLock) : IAspect<CLock>(pLock){ m_pObject->Lock(); }
     ~CLockAspect() { m_pObject->Unlock(); }
+
+private:
+    CLockAspect(const CLockAspect& obj);
+};
+
+
+class CAtomicInteger
+{
+public:
+    CAtomicInteger() : m_nValue(0) { }
+    CAtomicInteger(int nValue) : m_nValue(nValue) { }
+
+public:
+    int AddAndGet(int delta) { LOCK_SCOPE(m_lock); m_nValue += delta; return m_nValue; }
+    int GetAndAdd(int delta) { LOCK_SCOPE(m_lock); int nResult = m_nValue; m_nValue += delta; return nResult; }
+    int Get() { LOCK_SCOPE(m_lock); return m_nValue; }
+    void Clear() { LOCK_SCOPE(m_lock); m_nValue = 0; }
+
+private:
+    CAtomicInteger(const CAtomicInteger& obj) { }
+
+private:
+    CLock m_lock;
+    int m_nValue;
 };
 
 #endif // WIN32

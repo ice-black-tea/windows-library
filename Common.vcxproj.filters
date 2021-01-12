@@ -13,7 +13,6 @@
     <ClInclude Include="Common\Array.h" />
     <ClInclude Include="Common\Aspect.h" />
     <ClInclude Include="Common\Buffer.h" />
-    <ClInclude Include="Common\Cmd.h" />
     <ClInclude Include="Common\Common.h" />
     <ClInclude Include="Common\HashMap.h" />
     <ClInclude Include="Common\List.h" />
@@ -39,7 +38,6 @@
     <ClInclude Include="Network\Packet.h" />
     <ClInclude Include="Network\PacketFactory.h" />
     <ClInclude Include="Network\Socket.h" />
-    <ClInclude Include="Pool\ThreadCmd.h" />
     <ClInclude Include="Pool\ThreadPool.h" />
     <ClInclude Include="PEFile\LoadPE.h" />
     <ClInclude Include="PEFile\PEDef.h" />
@@ -75,6 +73,9 @@
     <ClInclude Include="DataBase\DBObject.h" />
     <ClInclude Include="DataBase\DBUtil.h" />
     <ClInclude Include="DataBase\DBUtilPool.h" />
+    <ClInclude Include="Util\ProcessorInformation.h" />
+    <ClInclude Include="Pool\ThreadTask.h" />
+    <ClInclude Include="Common\Command.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Common\Buffer.cpp" />
@@ -108,5 +109,6 @@
     <ClCompile Include="DataBase\DBObject.cpp" />
     <ClCompile Include="DataBase\DBUtil.cpp" />
     <ClCompile Include="DataBase\DBUtilPool.cpp" />
+    <ClCompile Include="Util\ProcessorInformation.cpp" />
   </ItemGroup>
 </Project>

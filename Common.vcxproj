@@ -27,7 +27,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120_xp</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -39,7 +39,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120_xp</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>false</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>false</UseOfMfc>
@@ -68,7 +68,8 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>
@@ -181,7 +182,7 @@
     <ClInclude Include="Common\Array.h" />
     <ClInclude Include="Common\Aspect.h" />
     <ClInclude Include="Common\Buffer.h" />
-    <ClInclude Include="Common\Cmd.h" />
+    <ClInclude Include="Common\Command.h" />
     <ClInclude Include="Common\Common.h" />
     <ClInclude Include="Common\HashMap.h" />
     <ClInclude Include="Common\List.h" />
@@ -232,8 +233,9 @@
     <ClInclude Include="PEFile\PEDef.h" />
     <ClInclude Include="PEFile\PEFile.h" />
     <ClInclude Include="PEFile\PEImp.h" />
-    <ClInclude Include="Pool\ThreadCmd.h" />
+    <ClInclude Include="Pool\ThreadTask.h" />
     <ClInclude Include="Pool\ThreadPool.h" />
+    <ClInclude Include="Util\ProcessorInformation.h" />
     <ClInclude Include="StringT.h" />
     <ClInclude Include="Struct.h" />
     <ClInclude Include="Util\DriverUtil.h" />
@@ -271,6 +273,7 @@
     <ClCompile Include="PEFile\LoadPE.cpp" />
     <ClCompile Include="PEFile\PEFile.cpp" />
     <ClCompile Include="Pool\ThreadPool.cpp" />
+    <ClCompile Include="Util\ProcessorInformation.cpp" />
     <ClCompile Include="Util\DriverUtil.cpp" />
     <ClCompile Include="Util\FileUtil.cpp" />
     <ClCompile Include="Util\InjectUtil.cpp" />

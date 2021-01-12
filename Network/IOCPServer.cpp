@@ -1,6 +1,7 @@
 #include <process.h>
 #include "Packet.h"
 #include "IOCPServer.h"
+#include "../Util/ProcessorInformation.h"
 
 #ifndef __AFX_H__
 #define TRACE
@@ -176,9 +177,7 @@ bool CIOCPServer::CreateCompletionPort()
     m_nWorkerCnt = 0;
 
     //设置线程数
-    SYSTEM_INFO sysInfo;
-    GetSystemInfo(&sysInfo);
-    int nWorker = sysInfo.dwNumberOfProcessors * 2;
+    int nWorker = CProcessorInformation::GetInstance()->GetLogicalProcessorCount();
 
     //创建工作线程
     for (int i = 0; i < nWorker; i++)

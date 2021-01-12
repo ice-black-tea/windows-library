@@ -25,6 +25,10 @@ CMyStringW::CMyStringW()
 }
 
 CMyStringW::CMyStringW(wchar_t ch, int nRepeat)
+    : m_nSize(0)
+    , m_nLength(0)
+    , m_pBuff(NULL)
+    , m_pnRefCnt(NULL)
 {
     Alloc(nRepeat + 1);
 
@@ -442,6 +446,11 @@ int CMyStringW::Split(const wchar_t *pszSplit, CMyList<CMyStringW>& lstStrings)
         pszStart = pszTarget + nSplitLength;
     }
 
+    if (pszStart[0] != L'\0')
+    {
+        lstStrings.AddTail(CMyStringW(pszStart));
+    }
+
     return lstStrings.GetCount();
 }
 
@@ -542,7 +551,7 @@ double CMyStringW::ToFloat(const wchar_t *pszSrc)
 {
     double dblValue = 0;
 
-    swscanf(pszSrc, L"%f", &dblValue);
+    swscanf(pszSrc, L"%lf", &dblValue);
 
     return dblValue;
 }

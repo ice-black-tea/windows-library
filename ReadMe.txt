@@ -37,7 +37,7 @@ Util
 
 
 需要设置
-    包含目录：xxx\xxx\Common;
-    库目录：xxx\xxx\Common;
+    添加项目包含目录：xxx\xxx\windows-library\
+    添加项目库目录：xxx\xxx\windows-library\
 
 /////////////////////////////////////////////////////////////////////////////
